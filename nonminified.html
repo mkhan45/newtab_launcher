@@ -4,9 +4,10 @@
 
 <script type="text/javascript">
 	var bigger;
+	var dict;
 
-	function duckSearch(){
-		var dict = {
+	function instantiate(){
+		dict = {
 			"y": document.getElementById("youtube"),
 			"f": document.getElementById("facebook"),
 			"r": document.getElementById("reddit"), 
@@ -14,6 +15,10 @@
 			"g": document.getElementById("github"), 
 			"b": document.getElementById("blackboard"), 
 		};
+
+	}
+
+	function duckSearch(){
 		var searchField = document.getElementById("search").value;
 		if (searchField){
 			if (searchField in dict){
@@ -25,14 +30,6 @@
 
 	function listener(){
 		console.log("changed");
-		var dict = {
-			"y": document.getElementById("youtube"),
-			"f": document.getElementById("facebook"),
-			"r": document.getElementById("reddit"), 
-			"d": document.getElementById("drive"), 
-			"g": document.getElementById("github"), 
-			"b": document.getElementById("blackboard"), 
-		};
 
 		var searchField = document.getElementById("search").value;
 
@@ -55,7 +52,7 @@
 
 </script>
 
-<body>
+<body onload="instantiate()">
 	<div class="container">
 		<a style="background: #cc181e" href="https://youtube.com" id="youtube">
 			<div class="content">
