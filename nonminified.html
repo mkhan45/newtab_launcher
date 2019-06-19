@@ -2,6 +2,54 @@
     <title>Launcher</title>
 </head>
 
+<style>
+.container{
+    width: 100%;
+    height: 75%;
+    place-self: center;
+    transition-duration: .025s;
+}
+
+        a{
+            width: 100%;
+            transition-duration: .025s;
+            height: 100%;
+            display: flex;
+            box-shadow: 0px 0px 18px 8px rgba(5, 5, 5, .28);
+        }
+
+
+        body{
+            background: #171924;
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 2.5% 2.5%;
+            align-content: space-evenly;
+        }
+
+        .content{
+            margin: auto;
+            color: white;
+            font-size: 60;
+            font-family: sans-serif;
+            transition-duration: .025s;
+        }
+
+
+        .selected{
+            transform: scale(1.25, 1.25) !important;
+            box-shadow: 0px 0px 15px 8px rgba(5, 5, 5, .3);
+        }
+
+        .selected .content{
+            font-size: 72;
+        }
+</style>
+
+
 <script type="text/javascript">
     var bigger;
 var dict;
@@ -19,8 +67,7 @@ function instantiate(){
 }
 
 function duckSearch(){
-    var searchField = document.getElementById("search").value;
-    if (searchField){
+    var searchField = document.getElementById("search").value; if (searchField){
         if (searchField in dict){
             dict[searchField].click();
         }
@@ -54,7 +101,7 @@ function listener(){
 
 <body onload="instantiate()">
     <div class="container">
-        <a style="background: #cc181e" href="https://youtube.com" id="youtube">
+        <a style="background: #bf1a2f" href="https://youtube.com" id="youtube">
             <div class="content">
                 Youtube
             </div>
@@ -62,7 +109,7 @@ function listener(){
     </div>
 
     <div class="container">
-        <a style="background: #3b5998" href="https://facebook.com" id="facebook">
+        <a style="background: #3e78b2" href="https://facebook.com" id="facebook">
             <div class="content">
                 Facebook
             </div>
@@ -70,7 +117,7 @@ function listener(){
     </div>
 
     <div class="container">
-        <a style="background: #ff4500" href="https://reddit.com" id="reddit">
+        <a style="background: #f24718" href="https://reddit.com" id="reddit">
             <div class="content">
                 Reddit
             </div>
@@ -82,7 +129,7 @@ function listener(){
     </form>
 
     <div class="container">
-        <a style="background: #0057e7" href="https://drive.google.com" id="drive">
+        <a style="background: #004ba8" href="https://drive.google.com" id="drive">
             <div class="content">
                 Google Drive
             </div>
@@ -98,7 +145,7 @@ function listener(){
     </div>
 
     <div class="container">
-        <a id="blackboard" style="background: #444444" href="https://fcps.blackboard.com">
+        <a id="blackboard" style="background: #292f36" href="https://fcps.blackboard.com">
             <div class="content">
                 Blackboard
             </div>
@@ -111,54 +158,3 @@ function listener(){
 <script>
     document.getElementById("search").onchange = listener;
 </script>
-
-<style>
-
-.container{
-    display: block;
-    width: 100%;
-    height: 75%;
-    place-self: center;
-    transition-duration: .025s;
-}
-
-        a{
-            align-content: center;
-            transition-duration: .025s;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            box-shadow: 0px 0px 18px 8px rgba(5, 5, 5, .28);
-        }
-
-
-        body{
-            background: lightcyan;
-            height: 100%;
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            grid-gap: 2.5% 2.5%;
-            align-content: space-evenly;
-        }
-
-        .content{
-            margin: auto;
-            color: white;
-            font-size: 60;
-            font-family: sans-serif;
-            transition-duration: .025s;
-        }
-
-
-        .selected{
-            transform: scale(1.25, 1.25) !important;
-            box-shadow: 0px 0px 15px 8px rgba(5, 5, 5, .3);
-        }
-
-        .selected .content{
-            font-size: 72;
-        }
-</style>
-
