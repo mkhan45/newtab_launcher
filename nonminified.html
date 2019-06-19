@@ -4,20 +4,24 @@
 
 <style>
 .container{
-    width: 95%;
+    width: 90%;
     height: 65%;
     place-self: center;
     transition-duration: .025s;
 }
 
         a{
-            width: 100%;
             transition-duration: .025s;
-            height: 100%;
-            display: flex;
+            height: 65%;
+            display: block;
             box-shadow: 0px 0px 18px 8px rgba(5, 5, 5, .28);
+            color: white;
+            text-align: center;
+            padding-top: 25%;
+            font-size: 60;
+            font-family: sans-serif;
+            text-decoration: none;
         }
-
 
         body{
             background: #171924;
@@ -25,27 +29,11 @@
             width: 100%;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            grid-gap: 2.5% 2.5%;
-            align-content: space-evenly;
         }
-
-        .content{
-            margin: auto;
-            color: white;
-            font-size: 60;
-            font-family: sans-serif;
-            transition-duration: .025s;
-        }
-
 
         .selected{
             transform: scale(1.25, 1.25) !important;
             box-shadow: 0px 0px 15px 8px rgba(5, 5, 5, .3);
-        }
-
-        .selected .content{
-            font-size: 72;
         }
 </style>
 
@@ -102,25 +90,19 @@ function listener(){
 <body onload="instantiate()">
     <div class="container">
         <a style="background: #bf1a2f" href="https://youtube.com" id="youtube">
-            <div class="content">
-                Youtube
-            </div>
+            Youtube
         </a>
     </div>
 
     <div class="container">
         <a style="background: #3e78b2" href="https://facebook.com" id="facebook">
-            <div class="content">
-                Facebook
-            </div>
+            Facebook
         </a>
     </div>
 
     <div class="container">
         <a style="background: #f24718" href="https://reddit.com" id="reddit">
-            <div class="content">
-                Reddit
-            </div>
+            Reddit
         </a>
     </div>
 
@@ -130,25 +112,19 @@ function listener(){
 
     <div class="container">
         <a style="background: #004ba8" href="https://drive.google.com" id="drive">
-            <div class="content">
-                Google Drive
-            </div>
+            Google Drive
         </a>
     </div>
 
     <div class="container" href="https://github.com">
         <a id="github" href="https://github.com" style="background: #222222">
-            <div class="content">
-                Github
-            </div>
+            Github
         </a>
     </div>
 
     <div class="container">
         <a id="blackboard" style="background: #292f36" href="https://fcps.blackboard.com">
-            <div class="content">
-                Blackboard
-            </div>
+            Blackboard
         </a>
     </div>
 
